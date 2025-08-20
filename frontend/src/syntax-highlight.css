@@ -1,0 +1,107 @@
+/* Syntax highlighting styles */
+.highlight {
+    background-color: #272822;
+    color: #f8f8f2;
+    border-radius: 4px;
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow-x: auto;
+    font-family: 'Fira Code', 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.highlight .lineno {
+    color: #75715e;
+    padding-right: 1em;
+    border-right: 1px solid #49483e;
+    text-align: right;
+    user-select: none;
+}
+
+.highlight .line:hover {
+    background-color: #3e3d32;
+}
+
+/* Token colors */
+.highlight .keyword { color: #f92672; }
+.highlight .string { color: #e6db74; }
+.highlight .number { color: #ae81ff; }
+.highlight .comment { color: #75715e; }
+.highlight .operator { color: #f92672; }
+.highlight .function { color: #a6e22e; }
+.highlight .class { color: #a6e22e; }
+.highlight .variable { color: #f8f8f2; }
+.highlight .builtin { color: #66d9ef; }
+
+/* Code block container */
+.code-block {
+    position: relative;
+    margin: 1em 0;
+}
+
+/* Copy button */
+.copy-button {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    padding: 0.5em 1em;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 4px;
+    color: #f8f8f2;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.copy-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.copy-button.copied {
+    background-color: #a6e22e;
+    color: #272822;
+}
+
+/* Language badge */
+.language-badge {
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    padding: 0.25em 0.75em;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: #f8f8f2;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Response formatting */
+.response-container {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.response-container p {
+    margin: 1em 0;
+}
+
+.response-container ul,
+.response-container ol {
+    margin: 1em 0;
+    padding-left: 2em;
+}
+
+.response-container li {
+    margin: 0.5em 0;
+}
+
+.response-container h1,
+.response-container h2,
+.response-container h3,
+.response-container h4 {
+    margin: 1.5em 0 0.5em;
+    color: #2c3e50;
+}
