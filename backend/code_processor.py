@@ -173,13 +173,9 @@ class CodeProcessor:
 
     @staticmethod
     def format_response(text):
-        """Format the entire response, processing both code blocks and text."""
+        """Format the entire response, processing both code blocks and text while preserving Markdown."""
         if not text:
             return ""
-
-        # Clean up markdown headers and symbols
-        text = re.sub(r"###\s*", "\n", text)  # Replace ### headers with newlines
-        text = re.sub(r"[*#]", "", text)  # Remove * and # symbols
 
         def process_code_block(match):
             lang = match.group(1) or ""
@@ -198,8 +194,8 @@ class CodeProcessor:
             r"```(\w+)?\n(.*?)\n```", process_code_block, text, flags=re.DOTALL
         )
 
-        # Add spacing between sections
-        text = re.sub(r"\n{3,}", "\n\n", text)  # Reduce multiple newlines to max 2
-        text = re.sub(r"(?<=\.)\s", ".\n\n", text)  # Add newline after periods
+        # Preserve Markdown formatting - do not strip * and # symbols
+        # Keep paragraphs separated by blank lines
+        # Ensure bullet points and headings are preserved
 
         return text.strip()

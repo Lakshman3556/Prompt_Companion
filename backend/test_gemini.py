@@ -33,8 +33,8 @@ def test_api_key():
 
         # Create model instance
         print("\n4. Model Initialization:")
-        model = genai.GenerativeModel("models/gemini-2.5-pro")
-        print("✓ Successfully initialized Gemini 2.5 Pro model")
+        model = genai.GenerativeModel("gemini-2.0-flash")
+        print("✓ Successfully initialized Gemini 2.0 Flash model")
 
         # Test simple generation
         print("\n5. Test Generation:")

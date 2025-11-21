@@ -1,0 +1,1 @@
+- Update toast message in App.js to show switch from previous section to new section
